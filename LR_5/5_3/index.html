@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Banners</title>
+    <style>
+        .conteiner {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+        .images-wrapper {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .images-wrapper img {
+            width: 400px;
+            height: 400px;
+        }
+        #form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #form input{
+            max-width: 140px;
+            width: 100%;
+        }
+    </style>
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <div class="conteiner">
+        <form id="form">
+            <input type="number" name="size" min="100" max="600" placeholder="розмір" />
+            <input type="number" name="time" min="2" max="15" placeholder="таймер"/>
+            <select name = "switch">
+                <option value="true">ввімкнути таймер</option>
+                <option value="false">увімкнути таймер</option>
+            </select>
+            <input type="submit" value="Submit"/>
+        </form>
+        <div class="images-wrapper">
+            <img src="./img/1.jpg" alt="image of game" class="image-to-show" />
+            <img src="./img/2.jpg" alt="image of game" hidden class="image-to-show" />
+            <img src="./img/3.JPG" alt="image of game" hidden class="image-to-show" />
+            <img src="./img/4.png" alt="image of game" hidden class="image-to-show" />
+        </div>
+        <div>
+            <button id="stop">Прекратить</button>
+            <button id="resume">Возобновить показ</button>
+            <span id="timer">3.000</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
